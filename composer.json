@@ -1,0 +1,40 @@
+{
+    "name": "shop-and-pay/omnipay-shop-and-pay",
+    "type": "library",
+    "description": "Shop & Pay driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "shopandpay",
+        "omnipay",
+        "pay",
+        "payment"
+    ],
+    "homepage": "https://shop-and-pay.readme.io/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shop & Pay"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\ShopAndPay\\" : "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Omnipay\\ShopAndPay\\Test\\": "tests/" }
+    },
+    "require": {
+        "omnipay/common": "^3.0.1",
+        "shopandpay/shopandpay": "^1.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3.1",
+        "squizlabs/php_codesniffer": "^3"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 src/",
+        "fix-style": "phpcbf -p --standard=PSR2 src/"
+    },
+    "prefer-stable": true
+}
